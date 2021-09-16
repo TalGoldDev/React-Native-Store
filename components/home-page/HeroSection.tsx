@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, Image } from "react-native";
 import { StyleSheet } from "react-native";
 import Colors from "../../constants/Colors";
 import { CustomButton } from "../CustomButton";
+const greenCamera = require("../../assets/images/green-camera.png");
 
 export default function HeroSection() {
   return (
@@ -10,6 +11,8 @@ export default function HeroSection() {
       <View style={styles.heroContainer}>
         <Text style={styles.title}>10% Discount</Text>
         <Text style={styles.description}>Grab yours one {"\n"}Today</Text>
+        <Image style={styles.imageOne} source={greenCamera} />
+        <Image style={styles.imageTwo} source={greenCamera} />
         <CustomButton
           text={"Explore"}
           bgColor={Colors.pallete.white}
@@ -22,6 +25,7 @@ export default function HeroSection() {
 
 const styles = StyleSheet.create({
   container: {
+    position: "relative",
     padding: 16,
     width: "100%",
     alignItems: "center",
@@ -34,6 +38,23 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     borderRadius: 10,
   },
+  imageOne: {
+    position: "absolute",
+    bottom: 3,
+    right: 0,
+    width: 100,
+    height: 100,
+    transform: [{ rotateZ: "340deg" }],
+  },
+  imageTwo: {
+    position: "absolute",
+    top: 20,
+    right: 15,
+    width: 60,
+    height: 60,
+    transform: [{ rotateZ: "210deg" }],
+  },
+
   title: {
     paddingTop: 16,
     color: "white",
