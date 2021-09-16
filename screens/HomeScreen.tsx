@@ -7,7 +7,33 @@ import EditScreenInfo from "../components/EditScreenInfo";
 import HeroSection from "../components/home-page/HeroSection";
 import Search from "../components/home-page/Search";
 import { Text, View } from "../components/Themed";
+import Colors from "../constants/Colors";
+import ProductImages from "../constants/ProductImages";
 import { RootTabScreenProps } from "../types";
+
+const ItemsList = [
+  {
+    id: 0,
+    name: "Instax Mini 9",
+    price: 49.99,
+    image: ProductImages.cameras.yellow,
+    color: Colors.pallete.yellow,
+  },
+  {
+    id: 1,
+    name: "Instax Mini X",
+    price: 49.99,
+    image: ProductImages.cameras.blue,
+    color: Colors.pallete.blue,
+  },
+  {
+    id: 2,
+    name: "Instax Mini X",
+    price: 49.99,
+    image: ProductImages.cameras.green,
+    color: Colors.pallete.green,
+  },
+];
 
 export default function HomeScreen() {
   return (
