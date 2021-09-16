@@ -14,6 +14,7 @@ export default function HeroSection() {
         <Image style={styles.imageOne} source={greenCamera} />
         <Image style={styles.imageTwo} source={greenCamera} />
         <CustomButton
+          onClick={() => {}}
           text={"Explore"}
           bgColor={Colors.pallete.white}
           textColor={Colors.pallete.green}

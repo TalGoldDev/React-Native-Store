@@ -36,7 +36,10 @@ const ItemsList = [
   },
 ];
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }: any) {
+  const gotoProduct = (id: Number) => {
+    navigation.navigate("Product", { productId: id });
+  };
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -52,6 +55,10 @@ export default function HomeScreen() {
           {ItemsList.map((item) => {
             return (
               <Product
+                onClick={() => {
+                  gotoProduct(item.id);
+                }}
+                key={item.id}
                 name={item.name}
                 price={item.price}
                 id={item.id}

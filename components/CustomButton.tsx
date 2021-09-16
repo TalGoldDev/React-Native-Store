@@ -6,6 +6,7 @@ interface Props {
   text: string;
   bgColor: string;
   textColor: string;
+  onClick: () => void;
 }
 
 export const CustomButton = (props: Props) => {
@@ -15,7 +16,7 @@ export const CustomButton = (props: Props) => {
     <View style={[classes.btnContainer, classes.boxWithShadow]}>
       <Button
         title={props.text}
-        onPress={() => {}}
+        onPress={props.onClick}
         color={props.textColor}
       ></Button>
     </View>

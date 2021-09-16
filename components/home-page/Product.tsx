@@ -10,6 +10,7 @@ interface Props {
   id: number;
   image: any;
   bgColor: string;
+  onClick: () => void;
 }
 
 export const Product = (props: Props) => {
@@ -22,6 +23,7 @@ export const Product = (props: Props) => {
       <Text style={classes.price}>${props.price}</Text>
       <View style={classes.btnContainer}>
         <CustomButton
+          onClick={props.onClick}
           text={"Buy"}
           textColor={props.bgColor}
           bgColor={Colors.pallete.white}
