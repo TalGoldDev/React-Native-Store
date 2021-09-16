@@ -7,8 +7,8 @@ import { CustomButton } from "../CustomButton";
 interface Props {
   name: string;
   price: number;
-  id: string;
-  image: string;
+  id: number;
+  image: any;
   bgColor: string;
 }
 
@@ -16,23 +16,58 @@ export const Product = (props: Props) => {
   const classes = styles(props);
 
   return (
-    <View>
-      <Text>name</Text>
-      <Text>Price</Text>
-      <CustomButton
-        text={"Buy"}
-        textColor={props.bgColor}
-        bgColor={Colors.pallete.white}
-      ></CustomButton>
-      <Image source={require(props.image)}></Image>
+    <View style={classes.container}>
+      <Text style={classes.limitedEdition}>Limited Edition</Text>
+      <Text style={classes.name}>{props.name}</Text>
+      <Text style={classes.price}>${props.price}</Text>
+      <View style={classes.btnContainer}>
+        <CustomButton
+          text={"Buy"}
+          textColor={props.bgColor}
+          bgColor={Colors.pallete.white}
+        ></CustomButton>
+      </View>
+      <Image style={classes.image} source={props.image}></Image>
     </View>
   );
 };
 
 const styles = (props: { bgColor: any }) =>
   StyleSheet.create({
-    container: { position: "relative" },
-    name: {},
-    price: {},
-    image: {},
+    container: {
+      alignSelf: "flex-start",
+      margin: 16,
+      paddingLeft: 16,
+      position: "relative",
+      backgroundColor: props.bgColor,
+      width: "85%",
+      borderRadius: 20,
+      alignItems: "flex-start",
+    },
+    limitedEdition: {
+      paddingTop: 16,
+      color: Colors.pallete.white,
+      fontSize: 20,
+      fontWeight: "bold",
+    },
+    name: {
+      color: Colors.pallete.white,
+      fontSize: 24,
+      fontWeight: "bold",
+    },
+    price: {
+      color: Colors.pallete.white,
+      fontSize: 36,
+      fontWeight: "bold",
+    },
+    image: {
+      position: "absolute",
+      width: 135,
+      height: 135,
+      right: -30,
+      top: "20%",
+    },
+    btnContainer: {
+      paddingBottom: 16,
+    },
   });

@@ -6,7 +6,7 @@ const searchIcon = require("../../assets/images/searchIcon.png");
 
 interface Props {}
 
-const B = (props: { children: any }) => (
+export const B = (props: { children: any }) => (
   <Text style={{ fontWeight: "bold" }}>{props.children}</Text>
 );
 

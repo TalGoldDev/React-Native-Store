@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     padding: 16,
     width: "100%",
     alignItems: "flex-start",
-    borderRadius: 10,
+    borderRadius: 20,
   },
   imageOne: {
     position: "absolute",

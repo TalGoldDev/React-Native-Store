@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import EditScreenInfo from "../components/EditScreenInfo";
 import HeroSection from "../components/home-page/HeroSection";
+import { Product } from "../components/home-page/Product";
 import Search from "../components/home-page/Search";
 import { Text, View } from "../components/Themed";
 import Colors from "../constants/Colors";
@@ -22,14 +23,14 @@ const ItemsList = [
   {
     id: 1,
     name: "Instax Mini X",
-    price: 49.99,
+    price: 79.99,
     image: ProductImages.cameras.blue,
     color: Colors.pallete.blue,
   },
   {
     id: 2,
-    name: "Instax Mini X",
-    price: 49.99,
+    name: "Instax Mini 11",
+    price: 65.94,
     image: ProductImages.cameras.green,
     color: Colors.pallete.green,
   },
@@ -48,8 +49,19 @@ export default function HomeScreen() {
         <ScrollView>
           <HeroSection />
           <Search />
+          {ItemsList.map((item) => {
+            return (
+              <Product
+                name={item.name}
+                price={item.price}
+                id={item.id}
+                image={item.image}
+                bgColor={item.color}
+              ></Product>
+            );
+          })}
+          <View style={{ paddingBottom: 32 }}></View>
         </ScrollView>
-        {/* <EditScreenInfo path="/screens/HomeScreen.tsx" /> */}
       </View>
     </SafeAreaView>
   );
