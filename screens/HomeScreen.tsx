@@ -11,12 +11,11 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text style={styles.title}>Tab Hello World!</Text>
-        <View
+        {/* <View
           style={styles.separator}
           lightColor="#eee"
           darkColor="rgba(255,255,255,0.1)"
-        />
+        /> */}
         <HeroSection />
         <EditScreenInfo path="/screens/HomeScreen.tsx" />
       </View>
@@ -27,6 +26,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    height: "100%",
   },
   title: {
     fontSize: 20,
