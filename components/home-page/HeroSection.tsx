@@ -35,12 +35,13 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   title: {
+    paddingTop: 16,
     color: "white",
     fontSize: 28,
-    fontWeight: "bold",
+    fontWeight: "800",
   },
   description: {
-    paddingTop: 16,
+    paddingTop: 8,
     color: "white",
     fontSize: 20,
   },

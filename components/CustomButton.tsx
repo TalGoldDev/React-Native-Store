@@ -12,7 +12,7 @@ export const CustomButton = (props: Props) => {
   const classes = styles(props);
 
   return (
-    <View style={classes.btnContainer}>
+    <View style={[classes.btnContainer, classes.boxWithShadow]}>
       <Button
         title={props.text}
         onPress={() => {}}
@@ -34,5 +34,12 @@ const styles = (props: { bgColor: any }) =>
       borderRadius: 16,
       borderWidth: 1,
       borderColor: props.bgColor,
+    },
+    boxWithShadow: {
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 1 },
+      shadowOpacity: 0.25,
+      shadowRadius: 2,
+      elevation: 5,
     },
   });
