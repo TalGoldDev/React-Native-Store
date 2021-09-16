@@ -27,6 +27,8 @@ import {
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 import ProductPage from "../components/product-page/ProductPage";
+import { Text } from "../components/Themed";
+import { StyleSheet } from "react-native";
 
 export default function Navigation({
   colorScheme,

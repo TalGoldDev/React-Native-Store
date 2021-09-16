@@ -14,7 +14,7 @@ const Search = (props: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
-        Tal Gold {"\n"}
+        Our Featured {"\n"}
         <B>Cameras</B>
       </Text>
       <View style={styles.searchBox}>

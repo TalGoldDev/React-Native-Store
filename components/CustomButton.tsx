@@ -7,10 +7,15 @@ interface Props {
   bgColor: string;
   textColor: string;
   onClick: () => void;
+  margin?: boolean;
 }
 
 export const CustomButton = (props: Props) => {
-  const classes = styles(props);
+  const margin = () => {
+    if (props.margin === false) return false;
+    else return true;
+  };
+  const classes = styles(props.bgColor, margin());
 
   return (
     <View style={[classes.btnContainer, classes.boxWithShadow]}>
@@ -23,18 +28,18 @@ export const CustomButton = (props: Props) => {
   );
 };
 
-const styles = (props: { bgColor: any }) =>
+const styles = (bgColor: string, margin: boolean) =>
   StyleSheet.create({
     btnContainer: {
-      marginTop: 16,
+      marginTop: margin === true ? 16 : 0,
       paddingTop: 12,
       paddingBottom: 12,
       paddingLeft: 28,
       paddingRight: 28,
-      backgroundColor: props.bgColor,
+      backgroundColor: bgColor,
       borderRadius: 16,
       borderWidth: 1,
-      borderColor: props.bgColor,
+      borderColor: bgColor,
     },
     boxWithShadow: {
       shadowColor: "#000",

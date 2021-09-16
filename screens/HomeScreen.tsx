@@ -10,31 +10,8 @@ import Search from "../components/home-page/Search";
 import { Text, View } from "../components/Themed";
 import Colors from "../constants/Colors";
 import ProductImages from "../constants/ProductImages";
+import { ItemsList } from "../constants/Products";
 import { RootTabScreenProps } from "../types";
-
-const ItemsList = [
-  {
-    id: 0,
-    name: "Instax Mini 9",
-    price: 49.99,
-    image: ProductImages.cameras.yellow,
-    color: Colors.pallete.yellow,
-  },
-  {
-    id: 1,
-    name: "Instax Mini X",
-    price: 79.99,
-    image: ProductImages.cameras.blue,
-    color: Colors.pallete.blue,
-  },
-  {
-    id: 2,
-    name: "Instax Mini 11",
-    price: 65.94,
-    image: ProductImages.cameras.green,
-    color: Colors.pallete.green,
-  },
-];
 
 export default function HomeScreen({ navigation }: any) {
   const gotoProduct = (id: Number) => {
@@ -79,6 +56,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     padding: 8,
+    backgroundColor: Colors.pallete.lighterGray,
   },
   separator: {
     marginVertical: 12,
