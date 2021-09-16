@@ -1,9 +1,11 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import EditScreenInfo from "../components/EditScreenInfo";
 import HeroSection from "../components/home-page/HeroSection";
+import Search from "../components/home-page/Search";
 import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
 
@@ -11,13 +13,17 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        {/* <View
+        <Text style={styles.logo}>Camera Store</Text>
+        <View
           style={styles.separator}
           lightColor="#eee"
           darkColor="rgba(255,255,255,0.1)"
-        /> */}
-        <HeroSection />
-        <EditScreenInfo path="/screens/HomeScreen.tsx" />
+        />
+        <ScrollView>
+          <HeroSection />
+          <Search />
+        </ScrollView>
+        {/* <EditScreenInfo path="/screens/HomeScreen.tsx" /> */}
       </View>
     </SafeAreaView>
   );
@@ -30,8 +36,13 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   separator: {
-    marginVertical: 30,
+    marginVertical: 12,
     height: 1,
-    width: "80%",
+    width: "100%",
+  },
+  logo: {
+    alignSelf: "center",
+    fontSize: 28,
+    fontWeight: "bold",
   },
 });
