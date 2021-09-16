@@ -28,10 +28,6 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
   },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
   separator: {
     marginVertical: 30,
     height: 1,

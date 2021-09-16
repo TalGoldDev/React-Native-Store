@@ -34,17 +34,6 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     borderRadius: 10,
   },
-  btnContainer: {
-    marginTop: 16,
-    paddingTop: 12,
-    paddingBottom: 12,
-    paddingLeft: 28,
-    paddingRight: 28,
-    backgroundColor: Colors.light.background,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: "#fff",
-  },
   title: {
     color: "white",
     fontSize: 28,
